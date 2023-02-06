@@ -1,0 +1,95 @@
+<!-- 
+Title: about.ejs (https://github.com/buwebdev/web-340/blob/master/week-5/fms/views/about.ejs)
+Author: Richard Krasso 
+Date: 2/5/2023
+Description: An EJS example page that helped me structure the elements of my own pages
+-->
+
+
+
+
+  <%- include('./_header.ejs') %>
+
+    <section class="container">
+      <div class="card center-div">
+        <div class="card-title"><%= pageTitle %></div>
+
+        <div class="card-content">
+          <p>
+            
+            We provide the Mid-Atlantic’s best boarding experience for your pets. We are able to accommodate all of your dogs, cats, birds and reptiles. You have something else? Call us. We may well be able to accommodate you. (Yes, we once boarded a goat.)
+          </p>
+            <p>
+              We know how difficult it can be to leave your dog in the care of others. We would feel the same way with our pets. The best thing we can suggest to you is to come in for our tour. There’s no need to call ahead. Just come in anytime. We are always providing our same excellent service 24 hours a day, seven days a week. Drop whenever you’d like to see what we mean. 
+            </p>
+             <p>
+
+               For dogs, by far our most common boarders, our services include two 15 minutes walks a day and, if you would like, play time with other dogs under close and active supervision by our expert staff. We are also very happy to combine boarding with our training and grooming services. Come back to the dog you dreamed of!
+              </p> 
+             <p>
+
+               One of our most common questions is whether we will work with the specific needs of your pet! Yes. We are happy to provide them with the food you leave for us, as well as their favorite toys. Whatever makes them feel most at home, we’ll do our very best to accommodate. (If your pet has particularly high anxiety or unusual needs, please call us to discuss if we are the right place for you.)
+              </p>  
+            <p>
+            All animals who board with us need to be up to date on vet-recommended vaccinations, and free of all illness. Call us for details. We suggest that you complete an initial registration well before your first stay with us. 
+          </p>
+
+
+        </div>
+      </div>
+    </section>
+
+
+    
+ <section class="container">
+      <div class="card center-div">
+        <div class="card-title">Select Services and Fees</div>
+
+        <div class="card-content">
+          
+
+          
+          <table style="border-spacing: 20px">
+            <tr>
+              <td>Per night price
+              </td>
+              <td>For each of the first five nights                
+              </td>
+              <td>For each additional night         
+              </td>
+            </tr>
+            <tr>
+              <td>1 pet
+              </td>
+              <td>$80/night
+              </td>
+              <td>$70/night
+              </td>
+            </tr>
+            <tr>
+              <td>2 pets
+              </td>
+              <td>$150/night
+              </td>
+              <td>$130/night
+              </td>
+            </tr>
+            <tr>
+              <td>3 pets
+              </td>
+              <td>$240/night
+              </td>
+              <td>$210/night
+              </td>
+            </tr>
+          </table>
+          
+        </div>
+      </div>
+    </section>
+
+
+
+    <%- include('./_footer.ejs') %>
+  </body>
+</html>

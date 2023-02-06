@@ -1,82 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <!-- Google fonts for Oswald -->
-    <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/site.css" />
-  </head>
+<!-- 
+Title: about.ejs (https://github.com/buwebdev/web-340/blob/master/week-5/fms/views/about.ejs)
+Author: Richard Krasso 
+Date: 2/5/2023
+Description: An EJS example page that helped me structure the elements of my own pages
+-->
 
-  <body>
-    <header class="header">
-      <h1>Fruit Management System</h1>
-    </header>
 
-    <section class="navbar">
-      <a href="/">Home</a>
-      <a href="/grooming">Grooming</a>
-    </section>
+    <%- include('./_header.ejs') %>
 
     <section class="container">
-      <h1 class="center-text">Welcome to the FMS About Us Page!</h1>
       <div class="card center-div">
         <div class="card-title"><%= pageTitle %></div>
 
         <div class="card-content">
-          <table style="border-spacing: 20px">
-            <tr>
-              <td>
-                <!-- https://unsplash.com/photos/5JQH9Iqnm9o -->
-                <img src="./images/fms-about.jpg" height="150" width="250" />
-              </td>
-              <td>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                quis dignissim lorem. Pellentesque interdum eget arcu id
-                viverra. Nunc iaculis nisl ut mi venenatis bibendum. Quisque vel
-                rutrum felis. Suspendisse pretium, quam vitae viverra
-                condimentum, mi neque convallis ligula, ac consectetur eros nisi
-                quis purus. Mauris lacinia mauris eget tortor pellentesque, et
-                pretium eros lobortis. Curabitur et euismod turpis, ut laoreet
-                ipsum. Aenean lacinia tincidunt egestas. Donec hendrerit
-                placerat dignissim. Curabitur arcu ante, porta id est ut, cursus
-                mattis est.
-              </td>
-            </tr>
-          </table>
-
+          
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis
-            dignissim lorem. Pellentesque interdum eget arcu id viverra. Nunc
-            iaculis nisl ut mi venenatis bibendum. Quisque vel rutrum felis.
-            Suspendisse pretium, quam vitae viverra condimentum, mi neque
-            convallis ligula, ac consectetur eros nisi quis purus. Mauris
-            lacinia mauris eget tortor pellentesque, et pretium eros lobortis.
-            Curabitur et euismod turpis, ut laoreet ipsum. Aenean lacinia
-            tincidunt egestas. Donec hendrerit placerat dignissim. Curabitur
-            arcu ante, porta id est ut, cursus mattis est. Aliquam nec lacus
-            eget eros dignissim commodo eget in est. Donec sem orci,
-            sollicitudin ac egestas vestibulum, facilisis vitae nulla. Mauris a
-            velit tempus, efficitur metus id, malesuada eros. Fusce at ornare
-            erat, quis convallis nulla.
+            A well groomed pet is a happy pet – and a very happy owner! 
           </p>
+          
+          <p>
+            We take pride in helping your pets look (and smell!) their very best. We are well versed in dog and cat breed grooming standards. We will groom to breed standards by default, but are more than happy to customize their look to your preferences. 
+          </p>
+          
+          <p>
+            In fact, several of our clients’ pets have performed very competitively in AKC competitions, and we’ve heard from these owners that the grooming we provided was a note by the competition judges. (Yes, we are proud.) 
+          </p>
+          
+          <p>
+            Many grooming services are also important for a healthy pet. All of our groomers have been vet trained to provide these services to the highest standards. These range from nail trimming to anal gland expression (yes, it’s a thing for some breeds and, yes, you very likely don’t want to do it). We are also trained to spot issues that even an attentive, loving owner might overlook. If we do notice any such issues, we will be sure to let you know so you can take an appropriate course of action. 
+          </p>
+          
+          <p>
+            We offer a comprehensive range of services. See prices for some of our most popular services below. Have something else in mind? Give us a call. If it is good for your pet and you can describe it, we have almost certainly done it. 
+          </p>
+          
         </div>
       </div>
     </section>
 
-    <footer>
-      <p>
-        &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        - <a href="https://www.bellevue.edu/">Bellevue University</a>
-      </p>
-    </footer>
+    <section class="container">
+      <div class="card center-div">
+        <div class="card-title">Select Services and Fees</div>
+
+        <div class="card-content">
+          
+
+          
+          <table style="border-spacing: 20px">
+            <tr>
+              <td>
+                Hand-Scissor Groom, Wash and Dry  
+              </td>
+              <td>
+                $80 per hour
+              </td>
+            </tr>
+            <tr>
+              <td>
+                De-Matting and/or Heavy Undercoat Removal  
+              </td>
+              <td>
+                $60 per hour
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Eye Cleaning & Eye Area Trim
+              </td>
+              <td>
+                $10
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ear Cleaning   
+              </td>
+              <td>
+                $5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ear Cleaning & Hand Plucking of Hair  
+              </td>
+              <td>
+                $12
+              </td>
+            </tr>
+          </table>
+          
+        </div>
+      </div>
+    </section>
+
+    <%- include('./_footer.ejs') %>
   </body>
 </html>

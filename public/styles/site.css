@@ -1,8 +1,8 @@
 /* 
-Title: 
-Author: 
-Date: 
-Description: 
+Title: site.css (https://github.com/buwebdev/web-340/blob/master/week-5/fms/public/styles/site.css)
+Author: Richard Krasso 
+Date: 2/5/2023
+Description: An CSS page that helped me with making the structure of my CSS
 */
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background-color: #3c275a;
+  background-color: #4D0026;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -41,8 +41,8 @@ h3 {
 
 .navbar {
   overflow: hidden;
-  background-color: #451d26;
-  border-bottom: 15px solid #d6a800;
+  background-color: #990F32;
+  border-bottom: 15px solid #ffd2b3;
 }
 
 .navbar a {
@@ -55,8 +55,8 @@ h3 {
 }
 
 .navbar a:hover {
-  background-color: #d6a800;
-  color: #451d26;
+  background-color: #ffd2b3;
+  color: #990F32;
 }
 
 .container {
@@ -73,7 +73,7 @@ h3 {
 .card-title {
   text-align: center;
   font-size: 2em;
-  color: #451d26;
+  color: #990F32;
   font-weight: 400;
 }
 
@@ -95,7 +95,7 @@ h3 {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #451d26;
+  background-color: #990F32;
   color: #fff;
 }
 
@@ -106,13 +106,13 @@ h3 {
 }
 
 .table tr:hover {
-  background-color: #d6a800;
-  color: #451d26;
+  background-color: #ffd2b3;
+  color: #990F32;
   cursor: pointer;
 }
 
 footer {
-  background-color: #451d26;
+  background-color: #990F32;
   /* position: absolute; */
   bottom: 0;
   width: 100%;
@@ -171,13 +171,13 @@ footer a:hover {
 }
 
 .btn-primary {
-  background-color: #451d26;
+  background-color: #990F32;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #d6a800;
-  color: #451d26;
+  background-color: #ffd2b3;
+  color: #990F32;
 }
 
 .full-width {
@@ -191,7 +191,17 @@ footer a:hover {
 }
 
 /* Bottom right text */
-.text-block {
+
+
+
+table {
+  /* border-collapse: collapse; */
+  width: 100%;
+  margin-bottom: 30px;
+  padding: auto;
+}
+
+/* .text-block {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -200,3 +210,22 @@ footer a:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+
+th {
+  padding: 12px 0 12px;
+
+  text-align: left;
+  background-color: #4f3674;
+  color: #fff;
+}
+
+tr:hover {
+  color: #4f3674;
+  background-color: #d6a800;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+} */
