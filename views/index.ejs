@@ -6,7 +6,7 @@ Description: An EJS example page that helped me structure the elements of my own
 -->
 
 
-    <%- include('./_header.ejs') %>
+    <%- include('./partials/_header.ejs') %>
 
     <section class="container">
       <div class="card center-div">
@@ -112,8 +112,8 @@ Description: An EJS example page that helped me structure the elements of my own
                   <br>
                   – Jane Smith, Arlington 
                 </p>
-
-                  <p>    
+                
+                <p>    
                   “I used to go to the
                   big box stores, but now I won’t go anywhere other than
                   Pets-R-Us. Their prices are competitive and their wisdom is
@@ -121,19 +121,18 @@ Description: An EJS example page that helped me structure the elements of my own
                   <br> 
                   –John Jones, Annandale
                 </p>
-
+                
               </div>
             </div>
-
+            <section></section>
             <br /><br /><br />
             <div class="card center-div">
               <div class="card-title">Contact Us</div>
+              <div class="card-content">
+                <p>
+                    We want to hear from you! Please call us at 703-333-0000 or, if you prefer, fill out the form below and we’ll respond as soon as we can
+                </p>
                 <form action="">
-                    <div>
-                        We want to hear from you! Please call us at 703-333-0000 or, if you prefer, fill out the form below and we’ll respond as soon as we can
-                    </div>
-
-
                     <br>
                     <label for="name">Full Name:</label>
                     <input type="text" name="name" placeholder="full name">
@@ -153,10 +152,12 @@ Description: An EJS example page that helped me structure the elements of my own
                     <br>
                     <input type="submit" value="Submit">
                 </form>
+                <br>
+              </div>
               </div>
             </div>
 
-            <%- include('./_footer.ejs') %>
+            <%- include('./partials/_footer.ejs') %>
           </section>
         </section>
       </section>

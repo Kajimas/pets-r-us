@@ -1,0 +1,38 @@
+<!-- 
+Title: register.ejs 
+Author: William Egge 
+Date: 2/12/2023
+Description: An EJS form page
+-->
+
+<%- include('./partials/_header.ejs') %>
+
+<section class="container">
+  <section>
+    <div class="card center-div">
+      <div class="card-title">Customer Registration</div>
+      <div class="card-content">
+      <p>
+        Please register to receive periodic discounts. 
+      </p>
+      <form action="/register" method="post">
+
+        <br />
+        <label for="customerId">Customer ID:</label>
+        <input type="text" name="customerId" id="customerId" required autofocus/>
+
+        <br />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required/>
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+      <br>
+    </div>
+  </div>
+  </section>
+</section>
+
+<%- include('./partials/_footer.ejs') %>
