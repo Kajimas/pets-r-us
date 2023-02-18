@@ -86,4 +86,20 @@ app.post("/register", (req, res) => {
   });
 });
 
+app.get("/customer-list", (req, res) => {
+  Customer.find({}, function(err, customers)  {
+    console.log(customers)
+    if (err) {
+        console.log(err);
+        next(err);
+    } else {
+        res.render('customer-list', {
+            title: 'Customer List',
+            pageTitle: 'Customers',
+            customers: customers
+        })
+    }
+})
+});
+
 app.listen(PORT, () => console.log(`Running on ${PORT}`));
