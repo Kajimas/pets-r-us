@@ -1,0 +1,97 @@
+<!-- 
+Title: order.ejs (https://github.com/buwebdev/web-340/blob/master/week-8/fms/views/order.ejs)
+Author: Richard Krasso 
+Date: 2/26/2023
+Description: An EJS example page that helped me structure the elements of my own pages
+-->
+
+<%- include('./partials/_header.ejs') %>
+
+<section>
+  <h1 class="center-text">Welcome to the Booking Page!</h1>
+
+  <div class="card center-div">
+    <div class="card-title"><%= pageTitle %></div>
+    <div class="card-content">
+      <div class="form">
+        <form action="/booking" method="post">
+          <div class="form-field">
+            <label for="userName">User Name</label><br />
+            <input
+              class="input"
+              type="text"
+              name="userName"
+              id="userName"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="firstName">First Name</label><br />
+            <input
+              class="input"
+              type="text"
+              name="firstName"
+              id="firstName"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="lastName">Last Name</label><br />
+            <input
+              class="input"
+              type="text"
+              name="lastName"
+              id="lastName"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label><br />
+            <input
+              class="input"
+              type="text"
+              name="email"
+              id="email"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="service">Service Option</label><br />
+            <select
+              name="service"
+              id="service"
+              class="drop-down-menu full-width"
+              required
+            >
+              <% services.forEach((service) => { %>
+              <option value="'<%= service.value %>'">
+                <%= service.text %>
+              </option>
+              <% }) %>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <input
+              type="submit"
+              value="Submit Appointment"
+              class="btn btn-primary full-width"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br /><br /><br /><br />
+
+<%- include('./partials/_footer.ejs') %>

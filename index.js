@@ -10,7 +10,10 @@ Description: A Javascript example that reminded me how to perform routing
 const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
+const fs = require("fs");
+
 const Customer = require("./models/customer");
+const Appointment = require("./models/appointment");
 
 const app = express();
 
@@ -32,8 +35,8 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true })); 
-app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.render("index", {
@@ -71,14 +74,14 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  console.log(req.body.customerId)
-  console.log(req.body.email)
+  console.log(req.body.customerId);
+  console.log(req.body.email);
 
   const newCustomer = new Customer({
     customerId: req.body.customerId,
-    email: req.body.email
-  })
-  newCustomer.save()
+    email: req.body.email,
+  });
+  newCustomer.save();
 
   res.render("index", {
     title: "Pets-R-Us: Home",
@@ -87,19 +90,52 @@ app.post("/register", (req, res) => {
 });
 
 app.get("/customer-list", (req, res) => {
-  Customer.find({}, function(err, customers)  {
-    console.log(customers)
+  Customer.find({}, function (err, customers) {
+    console.log(customers);
     if (err) {
-        console.log(err);
-        next(err);
+      console.log(err);
+      next(err);
     } else {
-        res.render('customer-list', {
-            title: 'Customer List',
-            pageTitle: 'Customers',
-            customers: customers
-        })
+      res.render("customer-list", {
+        title: "Customer List",
+        pageTitle: "Customers",
+        customers: customers,
+      });
     }
-})
+  });
+});
+
+app.get("/booking", (req, res) => {
+  let jsonFile = fs.readFileSync("./public/data/services.json");
+  let services = JSON.parse(jsonFile);
+
+  console.log(services);
+
+  res.render("booking", {
+    title: "Pets-R-Us: Customer Booking Form",
+    pageTitle: "Book Now!",
+    services: services,
+  });
+});
+
+app.post("/booking", (req, res, next) => {
+  console.log(`testing...`);
+  console.log(req.body);
+
+  const newAppointment = new Appointment({
+    userName: req.body.userName,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    service: req.body.service,
+  });
+
+  newAppointment.save();
+
+  res.render("index", {
+    title: "Pets-R-Us: Home",
+    pageTitle: "Landing Page",
+  });
 });
 
 app.listen(PORT, () => console.log(`Running on ${PORT}`));
