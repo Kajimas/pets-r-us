@@ -138,4 +138,26 @@ app.post("/booking", (req, res, next) => {
   });
 });
 
+//Creates the my-appointments page 
+app.get("/my-appointments", (req, res) => {
+  res.render("my-appointments", {
+    title: "Pets-R-Us: My Appointments",
+    pageTitle: "Appointments Lookup Form",
+  });
+});
+
+//Finds the appointments stored in the database
+app.get("/api/appointments/:email", async (req, res, next) => {
+  Appointment.find({ email: req.params.email }, function (err, appointments) {
+    if (err) {
+      console.log(err);
+      next(err);
+    } else {
+      res.json(appointments);
+      console.log(appointments)
+    }
+  });
+});
+
+
 app.listen(PORT, () => console.log(`Running on ${PORT}`));
