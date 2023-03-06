@@ -6,9 +6,13 @@ Description: An EJS example page that helped me structure the elements of my own
 -->
 
 
+<!-- the header partial used on all pages -->
     <%- include('./partials/_header.ejs') %>
 
+    <!-- all of this page's main content is wrapped in this container -->
     <section class="container">
+
+      <!-- the content of the "Welcome!" card starts here -->
       <div class="card center-div">
         <div class="card-title">Welcome!</div>
         <div class="card-content">
@@ -31,6 +35,8 @@ Description: An EJS example page that helped me structure the elements of my own
       </div>
 
       <br /><br /><br />
+
+    <!-- the content of the "Locations" card starts here -->
       <div class="card center-div">
         <div class="card-title">Locations</div>
         <div class="card-content">
@@ -47,6 +53,8 @@ Description: An EJS example page that helped me structure the elements of my own
       </div>
       <section>
         <br /><br /><br />
+
+        <!-- the content of the "Location Hours" card starts here -->
         <div class="card center-div">
           <div class="card-title">Location Hours</div>
           <div class="card-content">
@@ -86,6 +94,8 @@ Description: An EJS example page that helped me structure the elements of my own
         </div>
         <section>
           <br /><br /><br />
+
+          <!-- the content of the "Dog of the Week" card starts here -->
           <div class="card center-div">
             <div class="card-title">Dog of the Week</div>
             <div class="card-content">
@@ -101,6 +111,8 @@ Description: An EJS example page that helped me structure the elements of my own
           </div>
           <section>
             <br /><br /><br />
+
+            <!-- the content of the "Testimonials" card starts here -->
             <div class="card center-div">
               <div class="card-title">Testimonials</div>
               <div class="card-content">
@@ -126,6 +138,8 @@ Description: An EJS example page that helped me structure the elements of my own
             </div>
             <section></section>
             <br /><br /><br />
+
+            <!-- the content of the "Contact Us" card starts here -->
             <div class="card center-div">
               <div class="card-title">Contact Us</div>
               <div class="card-content">
@@ -157,6 +171,7 @@ Description: An EJS example page that helped me structure the elements of my own
               </div>
             </div>
 
+             <!-- the footer partial used on all pages -->
             <%- include('./partials/_footer.ejs') %>
           </section>
         </section>

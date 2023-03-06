@@ -7,11 +7,15 @@ Description: An EJS example page that helped me structure the elements of my own
 
 
 
-
+<!-- the header partial used on all pages -->
   <%- include('./partials/_header.ejs') %>
 
+  
+  <!-- the "Select Services and Fees" card starts here -->
     <section class="container">
       <div class="card center-div">
+
+        <!-- the page title is determined in the index.js file -->
         <div class="card-title"><%= pageTitle %></div>
 
         <div class="card-content">
@@ -40,7 +44,7 @@ Description: An EJS example page that helped me structure the elements of my own
     </section>
 
 
-    
+  <!-- the "Select Services and Fees" card starts here -->
  <section class="container">
       <div class="card center-div">
         <div class="card-title">Select Services and Fees</div>
@@ -89,7 +93,7 @@ Description: An EJS example page that helped me structure the elements of my own
     </section>
 
 
-
+ <!-- the footer partial used on all pages -->
     <%- include('./partials/_footer.ejs') %>
   </body>
 </html>

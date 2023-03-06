@@ -10,6 +10,7 @@ Description: A Javascript example that served as a template for the assignment
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// creates the schema that will be used for appointments
 const appointmentSchema = new Schema({
   userName: { type: String, required: true },
   firstName: { type: String, required: true },
@@ -18,4 +19,5 @@ const appointmentSchema = new Schema({
   service: { type: String, required: true },
 });
 
+//the schema is exported under the name "Appointment"
 module.exports = mongoose.model("Appointment", appointmentSchema);

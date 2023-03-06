@@ -9,9 +9,11 @@ Description: A Javascript example that served as a template for the assignment
 
 const mongoose = require("mongoose");
 
+// creates the schema that will be used for customers
 const customerSchema = new mongoose.Schema({
   customerId: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
 });
 
+//the schema is exported under the name "Customers"
 module.exports = mongoose.model("Customer", customerSchema);

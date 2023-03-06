@@ -5,6 +5,7 @@ Date: 3/4/2023
 Description: An EJS example page that helped me structure the elements of my own pages
 -->
 
+<!-- the header partial used on all pages -->
 <%- include('./partials/_header.ejs') %>
 <section>
   <br />
@@ -44,9 +45,9 @@ Description: An EJS example page that helped me structure the elements of my own
 <script>
   //   document.getElementById("search").onclick = function () {
   const btnSearch = document.querySelector("#search");
-  
+
   btnSearch.addEventListener("click", () => {
-      const email = document.querySelector("#email").value;
+    const email = document.querySelector("#email").value;
     // Creates table and populates it with the appointments
     // The appointments used are only the ones that match the submitted email
     fetch("/api/appointments/" + email)
@@ -63,4 +64,6 @@ Description: An EJS example page that helped me structure the elements of my own
       });
   });
 </script>
+
+<!-- the footer partial used on all pages -->
 <%- include('./partials/_footer.ejs') %>
